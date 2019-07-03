@@ -11,6 +11,7 @@ export default class Keyboard extends React.Component{
           id={key}
           value={this.props.state[key]} 
           onChange={this.props.handleChange}
+          placeholder='n/a'
         />
       </span>
     ))
