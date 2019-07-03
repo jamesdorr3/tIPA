@@ -3,16 +3,21 @@ import './App.css';
 
 import Keyboard from './Components/Keyboard'
 
-function App() {
-  const uppercaseLetters = String.fromCharCode(...[...Array('Z'.charCodeAt(0) - 'A'.charCodeAt(0) + 1).keys()].map(i => i + 'A'.charCodeAt(0)));
-  const lowercaseLetters = String.fromCharCode(...[...Array('z'.charCodeAt(0) - 'a'.charCodeAt(0) + 1).keys()].map(i => i + 'a'.charCodeAt(0)));
-  const numbers = [1,2,3,4,5,6,7,8,9,0]
-  const symbols = ['!','@','#','$','%','^','&','*','(',')']
-  return (
-    <div className="App">
-      < Keyboard print={'hi'}/>
-    </div>
-  );
+class App extends React.Component{
+  state={'a':'a','b':'b','c':'c','d':'d'}
+  render(){
+    return (
+      <div className="App">
+        < Keyboard className='lowercaseKeyboard' 
+        numberRow={['a']}
+        topRow={['b']}
+        middleRow={['c']}
+        bottomRow={['d']}
+        state={this.state}
+        />
+      </div>
+    );
+  }
 }
 
 // String.fromCharCode(...[...Array('Z'.charCodeAt(0) - 'A'.charCodeAt(0) + 1).keys()].map(i => i + 'A'.charCodeAt(0)));
