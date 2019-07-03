@@ -32,11 +32,12 @@
   }
 } */
 
-input[type='text']{width:40%;font-size:3em;background:white;border:1px solid black}
-input[type='textarea']{width:90%;position:relative;margin:1% 4%;font-size:5em;border:1px solid black}
+input[type='text']{width:97%;font-size:300%;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
+input[type='textarea']{width:90%;position:relative;margin:1% 4%;font-size:500%;border:1px solid black}
 .keyboard{border:1px solid black;border-radius:5px;padding:1%;margin:1% 0}
-.key{position:relative;border:0.5px solid gray;border-radius:3px}
-.keyName{font-size:3em}
+.key{position:relative;border:0.5px solid gray;border-radius:5px;background:black}
+/* .keyName{font-size:200%;background:black;color:white;position:absolute;top:0px;border-radius:25px;padding:1% 5%} */
+.keyName{font-size:150%;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}
 .numbers-row{position:relative;display:grid;grid-template-columns:0% repeat(10,1fr)0.5fr}
 .top-row{position:relative;display:grid;grid-template-columns:0.5fr repeat(10,1fr) 0%}
 .middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr)0.9fr}
