@@ -18,18 +18,26 @@ export default class Keyboard extends React.Component{
 
   render(){
     return(
-      <div className={this.props.className}>
-        <div className='numbers-row'>
+      <div className={this.props.className + ' keyboard'}>
+        <div className='numbers-row row'>
+          <span></span>
           {this.makeKeys(this.props.numberRow)}
+          <span></span>
         </div>
-        <div className='top-row'>
+        <div className='top-row row'>
+          <span></span>
           {this.makeKeys(this.props.topRow)}
+          <span></span>
         </div>
-        <div>
+        <div className='middle-row row'>
+          <span></span>
           {this.makeKeys(this.props.middleRow)}
+          <span></span>
         </div>
-        <div className='bottom-row'>
+        <div className='bottom-row row'>
+          <span></span>
           {this.makeKeys(this.props.bottomRow)}
+          <span></span>
         </div>
       </div>
     )
