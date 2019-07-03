@@ -4,9 +4,14 @@ export default class Keyboard extends React.Component{
 
   makeKeys = arr => {
     return arr.map(key => (
-      <span>
-        <label>{key}</label>
-        <input type='text' value={this.props.state[key]} />
+      <span className='key' key={key}>
+        <span className='keyName'>{key}</span>
+        <input 
+          type='text'
+          id={key}
+          value={this.props.state[key]} 
+          onChange={this.props.handleChange}
+        />
       </span>
     ))
   }
