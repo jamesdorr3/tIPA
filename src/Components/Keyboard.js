@@ -20,6 +20,7 @@ export default class Keyboard extends React.Component{
   suggestions = ['a','b']
 
   render(){
+    console.log(this.props.state)
     return(
       <div className={this.props.className + ' keyboard'}>
         <div className='numbers-row row'>
