@@ -11,10 +11,13 @@ export default class Keyboard extends React.Component{
           id={key}
           value={this.props.state[key]} 
           onChange={this.props.handleChange}
+          list={this.suggestions}
         />
       </span>
     ))
   }
+
+  suggestions = ['a','b']
 
   render(){
     return(

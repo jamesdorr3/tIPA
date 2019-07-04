@@ -18,6 +18,8 @@ class App extends React.Component{
   
   'textarea':''}
 
+  suggestions = ['a','b']
+
   handleChange = e => {
     this.setState({[e.target.id]:[e.target.value]})
   }
@@ -37,6 +39,11 @@ class App extends React.Component{
       <div className="App">
 
         <h1>Welcome to tIPA</h1>
+
+        <select value='English'>
+          <option value='English'>English</option>
+          <option value='Anglish'>Anglish</option>
+        </select>
 
         < Keyboard className='lowercaseKeyboard' 
         numberRow={['1','2','3','4','5','6','7','8','9','0']}
