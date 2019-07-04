@@ -7,11 +7,11 @@ class App extends React.Component{
 
   state={
 
-    selected: 'English',
+    selected: 'English 1',
 
     languages: {
 
-      English: {
+      'English 1': {
 
         '!':'','@':'ǝ','#':'','$':'','%':'r','^':'ʌ','&':'','*':'','(':'͡',')':'͡',
           
@@ -20,6 +20,19 @@ class App extends React.Component{
         'A':'eɪ','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'aɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'u','V':'ð','W':'','X':'x','Y':'','Z':'ʒ',
         
         'a':'æ','b':'b','c':'t͡ʃ','d':'d','e':'ɛ','f':'f','g':'g','h':'h','i':'ɪ','j':'d͡ʒ','k':'k','l':'l','m':'m','n':'n','o':'ɑ','p':'p','q':'Ɂ','r':'ɹ','s':'s','t':'t','u':'ʌ','v':'v','w':'w','x':'','y':'j','z':'z',
+      
+        ',':',','.':'·',
+      },
+
+      'English 2': {
+
+        '!':'','@':'ǝ','#':'','$':'','%':'r','^':'ʌ','&':'','*':'','(':'͡',')':'͡',
+          
+        '1':'ɪ','2':'ʒ','3':'ɛ','4':'ɔ','5':'ɾ̃','6':'ǝ','7':'ɫ','8':'ɲ','9':'ʊ','0':'ɔ',
+      
+        'A':'','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'ɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'u','V':'ð','W':'','X':'x','Y':'','Z':'ʒ',
+        
+        'a':'a','b':'b','c':'','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'','z':'z',
       
         ',':',','.':'·',
       }
@@ -32,6 +45,7 @@ class App extends React.Component{
   suggestions = ['a','b']
   
   componentDidMount(){
+    // this.setState({selected: Object.keys(this.state.languages)[0]})
     document.querySelector('input[type="textarea"]').focus()
     document.addEventListener('keydown', e => {
       if (e.target.id === 'textarea' && this.state.languages[this.state.selected][e.key] && this.state.languages[this.state.selected][e.key] != ''){
@@ -58,7 +72,7 @@ class App extends React.Component{
   }
 
   handleSelect = (e) => {
-    debugger
+    this.setState({selected: e.target.value})
   }
 
   render(){
