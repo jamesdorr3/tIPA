@@ -9,7 +9,7 @@ export default class Keyboard extends React.Component{
         <input 
           type='text'
           id={key}
-          value={this.props.state[key]} 
+          value={this.props.language[key]} 
           onChange={this.props.handleChange}
           list={this.suggestions}
         />
@@ -20,7 +20,6 @@ export default class Keyboard extends React.Component{
   suggestions = ['a','b']
 
   render(){
-    console.log(this.props.state)
     return(
       <div className={this.props.className + ' keyboard'}>
         <div className='numbers-row row'>

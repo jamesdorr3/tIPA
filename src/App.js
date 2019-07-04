@@ -7,11 +7,11 @@ class App extends React.Component{
 
   state={
 
-    selected: 'English 1',
+    selected: 'English, Phonologic',
 
     languages: {
 
-      'English 1': {
+      'English, Phonologic': {
 
         '!':'','@':'ǝ','#':'','$':'','%':'r','^':'ʌ','&':'','*':'','(':'͡',')':'͡',
           
@@ -21,10 +21,10 @@ class App extends React.Component{
         
         'a':'æ','b':'b','c':'t͡ʃ','d':'d','e':'ɛ','f':'f','g':'g','h':'h','i':'ɪ','j':'d͡ʒ','k':'k','l':'l','m':'m','n':'n','o':'ɑ','p':'p','q':'Ɂ','r':'ɹ','s':'s','t':'t','u':'ʌ','v':'v','w':'w','x':'','y':'j','z':'z',
       
-        ',':',','.':'·',
+        ',':',','.':'·',';':''
       },
 
-      'English 2': {
+      'English, Orthographic': {
 
         '!':'','@':'ǝ','#':'','$':'','%':'r','^':'ʌ','&':'','*':'','(':'͡',')':'͡',
           
@@ -34,15 +34,26 @@ class App extends React.Component{
         
         'a':'a','b':'b','c':'','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'','z':'z',
       
-        ',':',','.':'·',
+        ',':',','.':'·',';':''
+      },
+
+      'Spanish': {
+
+        '!':'','@':'','#':'','$':'','%':'','^':'','&':'','*':'','(':'͡',')':'͡',
+          
+        '1':'','2':'','3':'','4':'','5':'','6':'','7':'','8':'','9':'','0':'',
+      
+        'A':'','B':'','C':'','D':'','E':'','F':'','G':'','H':'ʰ','I':'','J':'','K':'','L':'','M':'','N':'ŋ','O':'','P':'pʰ','Q':'','R':'r','S':'ʃ','T':'','U':'u','V':'ð','W':'','X':'','Y':'','Z':'',
+        
+        'a':'ɑ','b':'b','c':'k','d':'ð','e':'e','f':'f','g':'g','h':'h','i':'i','j':'h','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'j','z':'z',
+      
+        ',':',','.':'·',';':'ɲ'
       }
 
     },
     
     'textarea':''
   }
-
-  suggestions = ['a','b']
   
   componentDidMount(){
     // this.setState({selected: Object.keys(this.state.languages)[0]})
@@ -92,7 +103,7 @@ class App extends React.Component{
         topRow={['q','w','e','r','t','y','u','i','o','p']}
         middleRow={['a','s','d','f','g','h','j','k','l']}
         bottomRow={['z','x','c','v','b','n','m',',','.']}
-        state={this.state.languages[this.state.selected]}
+        language={this.state.languages[this.state.selected]}
         handleChange={this.changeKey}
         />
 
@@ -101,7 +112,7 @@ class App extends React.Component{
         topRow={['Q','W','E','R','T','Y','U','I','O','P']}
         middleRow={['A','S','D','F','G','H','J','K','L']}
         bottomRow={['Z','X','C','V','B','N','M','<','>']}
-        state={this.state.languages[this.state.selected]}
+        language={this.state.languages[this.state.selected]}
         handleChange={this.changeKey}
         />
 
