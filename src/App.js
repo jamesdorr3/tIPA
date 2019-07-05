@@ -21,7 +21,7 @@ class App extends React.Component{
         
         'a':'æ','b':'b','c':'t͡ʃ','d':'d','e':'ɛ','f':'f','g':'g','h':'h','i':'ɪ','j':'d͡ʒ','k':'k','l':'l','m':'m','n':'n','o':'ɑ','p':'p','q':'Ɂ','r':'ɹ','s':'s','t':'t','u':'ʌ','v':'v','w':'w','x':'','y':'j','z':'z',
       
-        ',':',','.':'·',';':''
+        ',':',','.':'·',';':'','~':'̃',
       },
 
       'English, Orthographic': {
@@ -48,7 +48,20 @@ class App extends React.Component{
         'a':'ɑ','b':'b','c':'k','d':'ð','e':'e','f':'f','g':'g','h':'h','i':'i','j':'h','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'j','z':'z',
       
         ',':',','.':'·',';':'ɲ'
-      }
+      },
+
+      'English, no IPA': {
+
+        '!':'','@':'','#':'','$':'','%':'','^':'','&':'','*':'','(':'',')':'',
+          
+        '1':'','2':'','3':'','4':'','5':'','6':'','7':'','8':'','9':'','0':'',
+      
+        'A':'','B':'','C':'','D':'','E':'','F':'','G':'','H':'','I':'','J':'','K':'','L':'','M':'','N':'','O':'','P':'','Q':'','R':'','S':'','T':'','U':'','V':'','W':'','X':'','Y':'','Z':'',
+        
+        'a':'','b':'','c':'','d':'','e':'','f':'','g':'','h':'','i':'','j':'','k':'','l':'','m':'','n':'','o':'','p':'','q':'','r':'','s':'','t':'','u':'','v':'','w':'','x':'','y':'','z':'',
+      
+        ',':'','.':'',';':''
+      },
 
     },
     
@@ -93,9 +106,11 @@ class App extends React.Component{
         <h1>Welcome to tIPA</h1>
 
         <select value={this.state.preset} onChange={this.handleSelect}>
-          {Object.keys(this.state.languages).map(language => (
-            <option value={language}>{language}</option>
-          ))}
+          {/* <optgroup label='English'> */}
+            {Object.keys(this.state.languages).sort().map(language => (
+              <option key={language} value={language}>{language}</option>
+            ))}
+          {/* </optgroup> */}
         </select>
 
         < Keyboard className='lowercaseKeyboard' 

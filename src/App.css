@@ -33,10 +33,10 @@
 } */
 
 select{background:rgb(231, 231, 231);font-size:200%;position:relative;width:50%;left:25%;box-shadow:5px 5px 5px gray}
-input[type='text']{width:97%;font-size:150%;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
+input[type='text']{width:95%;font-size:150%;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
 input[type='textarea']{width:90%;position:relative;margin:1% 4%;font-size:300%;border:1px solid black}
 .keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% 0;background:darkgray}
-.key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black}
+.key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black;}
 .key:hover{box-shadow:none;}
 /* .keyName{font-size:200%;background:black;color:white;position:absolute;top:0px;border-radius:25px;padding:1% 5%} */
 .keyName{font-size:100%;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}

@@ -9,15 +9,18 @@ export default class Keyboard extends React.Component{
         <input 
           type='text'
           id={key}
+          placeholder={this.props.language[key]} 
           value={this.props.language[key]} 
           onChange={this.props.handleChange}
-          list={this.suggestions}
+          list='suggestions'
+          onClick={(e) => e.target.value = ''}
+          onBlur={(e) => e.target.value = this.props.language[key]}
         />
       </span>
     ))
   }
 
-  suggestions = ['a','b']
+  suggestions = ['a','b','d']
 
   render(){
     return(
@@ -42,6 +45,9 @@ export default class Keyboard extends React.Component{
           {this.makeKeys(this.props.bottomRow)}
           <span></span>
         </div>
+        <datalist id='suggestions'>
+          {this.suggestions.map(suggestion => <option value={suggestion} />)}
+        </datalist>
       </div>
     )
   }
