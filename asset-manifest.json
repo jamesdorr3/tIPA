@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tIPA/static/css/main.e4e4d609.chunk.css",
+    "main.js": "/tIPA/static/js/main.5ed90aa4.chunk.js",
+    "main.js.map": "/tIPA/static/js/main.5ed90aa4.chunk.js.map",
+    "runtime~main.js": "/tIPA/static/js/runtime~main.6c9789b2.js",
+    "runtime~main.js.map": "/tIPA/static/js/runtime~main.6c9789b2.js.map",
+    "static/js/2.b13a9952.chunk.js": "/tIPA/static/js/2.b13a9952.chunk.js",
+    "static/js/2.b13a9952.chunk.js.map": "/tIPA/static/js/2.b13a9952.chunk.js.map",
+    "index.html": "/tIPA/index.html",
+    "precache-manifest.9279a78331bdb0ab3b822fcf31ad96de.js": "/tIPA/precache-manifest.9279a78331bdb0ab3b822fcf31ad96de.js",
+    "service-worker.js": "/tIPA/service-worker.js",
+    "static/css/main.e4e4d609.chunk.css.map": "/tIPA/static/css/main.e4e4d609.chunk.css.map"
+  }
+}
