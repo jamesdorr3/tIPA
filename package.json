@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "http://gitname.github.io/tIPA",
   "dependencies": {
+    "lodash": "^4.17.14",
+    "lodash.template": "^4.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
