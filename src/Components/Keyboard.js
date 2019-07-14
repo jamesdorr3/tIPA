@@ -20,8 +20,6 @@ export default class Keyboard extends React.Component{
     ))
   }
 
-  suggestions = ['a','b','d']
-
   render(){
     return(
       <div className={this.props.className + ' keyboard'}>
@@ -46,7 +44,7 @@ export default class Keyboard extends React.Component{
           <span></span>
         </div>
         <datalist id='suggestions'>
-          {this.suggestions.map(suggestion => <option value={suggestion} />)}
+          {this.props.language.suggestions ? this.props.language.suggestions.map(suggestion => <option value={suggestion} />) : null}
         </datalist>
       </div>
     )
