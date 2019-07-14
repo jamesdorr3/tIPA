@@ -38,7 +38,7 @@ class App extends React.Component{
         
         'a':'a','b':'b','c':'','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'','z':'z',
       
-        ',':'ˌ','.':'·',';':''
+        ',':'ˌ','.':'.',';':'','~':'̃',"'":'ˈ'
       },
 
       'Spanish': {
@@ -49,11 +49,11 @@ class App extends React.Component{
           
         '1':'','2':'','3':'','4':'','5':'','6':'','7':'','8':'','9':'','0':'',
       
-        'A':'','B':'','C':'','D':'','E':'','F':'','G':'','H':'ʰ','I':'','J':'','K':'','L':'','M':'','N':'ŋ','O':'','P':'pʰ','Q':'','R':'r','S':'ʃ','T':'','U':'u','V':'ð','W':'','X':'','Y':'','Z':'',
+        'A':'','B':'β','C':'tʃ','D':'d','E':'','F':'','G':'ɣ','H':'ʰ','I':'','J':'j','K':'','L':'ʎ','M':'','N':'ŋ','O':'','P':'pʰ','Q':'','R':'r','S':'ʃ','T':'','U':'u','V':'ð','W':'','X':'','Y':'','Z':'',
         
-        'a':'ɑ','b':'b','c':'k','d':'ð','e':'e','f':'f','g':'g','h':'h','i':'i','j':'h','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'j','z':'z',
+        'a':'a','b':'b','c':'θ','d':'ð','e':'e','f':'f','g':'g','h':'h','i':'i','j':'h','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'ɾ','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'ʝ','z':'z',
       
-        ',':'ˌ','.':'·',';':'ɲ'
+        ',':'ˌ','.':'.',';':'ɲ','~':'̃',"'":'ˈ'
       },
 
       'English, no IPA': {
@@ -111,12 +111,10 @@ class App extends React.Component{
 
         <h1>Welcome to tIPA</h1>
 
-        <select value={this.state.preset} onChange={this.handleSelect}>
-          {/* <optgroup label='English'> */}
+        <select value={this.state.selected} onChange={this.handleSelect}>
             {Object.keys(this.state.languages).sort().map(language => (
               <option key={language} value={language}>{language}</option>
             ))}
-          {/* </optgroup> */}
         </select>
 
         < Keyboard className='lowercaseKeyboard' 
