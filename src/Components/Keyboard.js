@@ -44,7 +44,7 @@ export default class Keyboard extends React.Component{
           <span></span>
         </div>
         <datalist id='suggestions'>
-          {this.props.language.suggestions ? this.props.language.suggestions.map(suggestion => <option value={suggestion} />) : null}
+          {this.props.language.suggestions ? this.props.language.suggestions.map(suggestion => <option key={suggestion} value={suggestion} />) : null}
         </datalist>
       </div>
     )
