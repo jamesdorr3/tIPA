@@ -100,7 +100,6 @@ class App extends React.Component{
         }
       }
     })
-    console.log(this.state.languages[this.state.selected]['2'])
   }
 
   changeTextarea = e => {
