@@ -80,9 +80,12 @@ class App extends React.Component{
     // this.setState({selected: Object.keys(this.state.languages)[0]})
     document.querySelector('input[type="textarea"]').focus()
     document.addEventListener('keydown', e => {
-      if (e.target.id === 'textarea' && this.state.languages[this.state.selected][e.key] && this.state.languages[this.state.selected][e.key] !== ''){
+      if (e.target.id === 'textarea' && this.state.languages[this.state.selected][e.key] && this.state.languages[this.state.selected][e.key] !== null){
         e.preventDefault()
         this.setState({'textarea': this.state.textarea + this.state.languages[this.state.selected][e.key]})
+      }
+      else if (e.key === 'Backspace' && e.target.id && e.target.id !== 'textarea'){
+        this.changeKey(e)
       }
     })
   }
@@ -93,7 +96,7 @@ class App extends React.Component{
         ...this.state.languages,
         [this.state.selected]:{
           ...this.state.languages[this.state.selected],
-          [e.target.id]:[e.target.value]
+          [e.target.id]: e.target.value
         }
       }
     })
