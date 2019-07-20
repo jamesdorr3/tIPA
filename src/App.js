@@ -13,7 +13,7 @@ class App extends React.Component{
 
       'English, Phonologic': {
 
-        suggestions: ['æ','ɑ','ɒ','aɪ','aʊ','dʒ','ə','eɪ','ɛ','i','ɪ','ʒ','ŋ','ɔ','ɔɪ','oʊ','ʃ','tʃ','θ','ð','ʌ','ʊ','ʍ','ʔ'],
+        suggestions: ['reset','æ','ɑ','ɒ','aɪ','aʊ','dʒ','ə','eɪ','ɛ','i','ɪ','ʒ','ŋ','ɔ','ɔɪ','oʊ','ʃ','tʃ','θ','ð','ʌ','ʊ','ʍ','ʔ'],
 
         '!':'','@':'ǝ','#':'','$':'','%':'r','^':'ʌ','&':'','*':'','(':'͡',')':'͡',
           
@@ -91,15 +91,21 @@ class App extends React.Component{
   }
 
   changeKey = e => {
-    this.setState({
-      languages:{
-        ...this.state.languages,
-        [this.state.selected]:{
-          ...this.state.languages[this.state.selected],
-          [e.target.id]: e.target.value
-        }
-      }
-    })
+    const langPlusKey = `${this.state.selected} ${e.target.id}`
+    if(e.target.value==='reset'){
+      localStorage.removeItem(langPlusKey)
+    }else{
+      localStorage.setItem(langPlusKey, e.target.value)
+    }
+    // this.setState({
+    //   languages:{
+    //     ...this.state.languages,
+    //     [this.state.selected]:{
+    //       ...this.state.languages[this.state.selected],
+    //       [e.target.id]: e.target.value
+    //     }
+    //   }
+    // })
   }
 
   changeTextarea = e => {
@@ -108,6 +114,14 @@ class App extends React.Component{
 
   handleSelect = (e) => {
     this.setState({selected: e.target.value})
+  }
+
+  removeLocalStorage = () => {
+    Object.keys(localStorage).forEach(item => {
+      if(item.includes(this.state.selected)){
+        localStorage.removeItem(item)
+      }
+  })
   }
 
   render(){
@@ -121,13 +135,17 @@ class App extends React.Component{
               <option key={language} value={language}>{language}</option>
             ))}
         </select>
+        <p>
+          <button onClick={this.removeLocalStorage} value='Reset'>Reset Keys</button>
+        </p>
 
         < Keyboard className='lowercaseKeyboard' 
         numberRow={['1','2','3','4','5','6','7','8','9','0']}
         topRow={['q','w','e','r','t','y','u','i','o','p']}
         middleRow={['a','s','d','f','g','h','j','k','l']}
         bottomRow={['z','x','c','v','b','n','m',',','.']}
-        language={this.state.languages[this.state.selected]}
+        languageKeys={this.state.languages[this.state.selected]}
+        languageName={this.state.selected}
         handleChange={this.changeKey}
         />
 
@@ -136,7 +154,8 @@ class App extends React.Component{
         topRow={['Q','W','E','R','T','Y','U','I','O','P']}
         middleRow={['A','S','D','F','G','H','J','K','L']}
         bottomRow={['Z','X','C','V','B','N','M','<','>']}
-        language={this.state.languages[this.state.selected]}
+        languageKeys={this.state.languages[this.state.selected]}
+        languageName={this.state.selected}
         handleChange={this.changeKey}
         />
 
