@@ -1,46 +1,34 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+*{font-family: "Times New Roman", Times, sans-serif;}
+body{margin:0;padding:0}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-select{background:rgb(231, 231, 231);font-size:20px;position:relative;width:50%;left:25%;box-shadow:5px 5px 5px gray}
-input[type='text']{width:95%;font-size:15px;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
-input[type='textarea']{width:90%;position:relative;margin:1% 4%;font-size:30px;border:1px solid black;}
-.keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% 0;background:darkgray}
+select{background:rgb(231, 231, 231);font-size:40px;position:relative;width:90%;left:5%;box-shadow:5px 5px 5px gray}
+input[type='text']{width:95%;font-size:30px;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:2%}
+h1{background:rgb(0, 47, 255);color:white;text-align:center;margin:0%;padding:2%;width:100%}
+p,li{margin:2%}
+p{text-align:center}
+li{font-size:12px}
+#textarea{width:90%;position:relative;margin:1% 4%;padding:1%;font-size:30px;border:1px solid black;}
+.keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% auto;background:darkgray;max-width:1200px}
 .key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black;}
 .key:hover{box-shadow:none;}
 /* .keyName{font-size:200%;background:black;color:white;position:absolute;top:0px;border-radius:25px;padding:1% 5%} */
-.keyName{font-size:10px;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}
+.keyName{font-size:30px;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}
 .numbers-row{position:relative;display:grid;grid-template-columns:0% repeat(10,1fr)0.5fr}
 .top-row{position:relative;display:grid;grid-template-columns:0.5fr repeat(10,1fr) 0%}
-.middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr)0.9fr}
+.middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr) 0.9fr}
 .bottom-row{position:relative;display:grid;grid-template-columns:1.25fr repeat(9,1fr) 0.5fr}
+
+/* @media screen and (min-width:90px){
+  select{background:rgb(231, 231, 231);font-size:20px;position:relative;width:50%;left:25%;box-shadow:5px 5px 5px gray}
+  input[type='text']{width:95%;font-size:15px;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
+  #textarea{width:90%;position:relative;margin:1% 4%;font-size:30px;border:1px solid black;}
+  .keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% auto;background:darkgray;max-width:1200px}
+  .key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black;}
+  .key:hover{box-shadow:none;}
+  .keyName{font-size:10px;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}
+  .numbers-row{position:relative;display:grid;grid-template-columns:0% repeat(10,1fr)0.5fr}
+  .top-row{position:relative;display:grid;grid-template-columns:0.5fr repeat(10,1fr) 0%}
+  .middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr) 0.9fr}
+  .bottom-row{position:relative;display:grid;grid-template-columns:1.25fr repeat(9,1fr) 0.5fr}
+} */

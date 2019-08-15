@@ -6,21 +6,23 @@ export default class Keyboard extends React.Component{
     return arr.map(key => (
       <span className='key' key={key}>
         <span className='keyName'>{key}</span>
-        <input 
+        <input
+          acceptCharset="UTF-8"
           type='text'
           id={key}
-          placeholder={this.props.language[key]} 
-          value={this.props.language[key]} 
+          placeholder={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
+          value={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
           onChange={this.props.handleChange}
           list='suggestions'
           onClick={(e) => e.target.value = ''}
-          onBlur={(e) => e.target.value = this.props.language[key]}
+          onBlur={(e) => e.target.value = this.props.languageKeys[key]}
         />
       </span>
     ))
   }
 
   render(){
+    // console.log(this.props.languageName)
     return(
       <div className={this.props.className + ' keyboard'}>
         <div className='numbers-row row'>
@@ -44,7 +46,7 @@ export default class Keyboard extends React.Component{
           <span></span>
         </div>
         <datalist id='suggestions'>
-          {this.props.language.suggestions ? this.props.language.suggestions.map(suggestion => <option key={suggestion} value={suggestion} />) : null}
+          {this.props.languageKeys.suggestions ? this.props.languageKeys.suggestions.map(suggestion => <option key={suggestion} value={suggestion} />) : null}
         </datalist>
       </div>
     )
