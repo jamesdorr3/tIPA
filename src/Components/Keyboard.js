@@ -6,7 +6,8 @@ export default class Keyboard extends React.Component{
     return arr.map(key => (
       <span className='key' key={key}>
         <span className='keyName'>{key}</span>
-        <input 
+        <input
+          acceptCharset="UTF-8"
           type='text'
           id={key}
           placeholder={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
