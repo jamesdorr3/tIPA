@@ -13,6 +13,7 @@ export default class Keyboard extends React.Component{
           placeholder={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
           value={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
           onChange={this.props.handleChange}
+          onKeyDown={this.props.handleChange} // make listen for 'delete' and erase shit
           list='suggestions'
           onClick={(e) => e.target.value = ''}
           onBlur={(e) => e.target.value = this.props.languageKeys[key]}

@@ -19,7 +19,8 @@ li{font-size:12px}
 .middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr) 0.9fr}
 .bottom-row{position:relative;display:grid;grid-template-columns:1.25fr repeat(9,1fr) 0.5fr}
 
-/* @media screen and (min-width:90px){
+/* @media only screen and (min-width:600px){
+  body{background:red}
   select{background:rgb(231, 231, 231);font-size:20px;position:relative;width:50%;left:25%;box-shadow:5px 5px 5px gray}
   input[type='text']{width:95%;font-size:15px;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:0%}
   #textarea{width:90%;position:relative;margin:1% 4%;font-size:30px;border:1px solid black;}
