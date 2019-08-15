@@ -92,20 +92,25 @@ class App extends React.Component{
     'textarea':''
   }
   
-  componentDidMount(){ // add NO ctrl or option or command
+  // componentDidMount(){ // add NO ctrl or option or command
     // this.setState({selected: Object.keys(this.state.languages)[0]})
-    document.querySelector('#textarea').focus()
-    document.addEventListener('keydown', e => {
-      if (e.target.id === 'textarea' && this.state.languages[this.state.selected][e.key] && this.state.languages[this.state.selected][e.key] !== null){
-        e.preventDefault()
-        const langPlusKey = `${this.state.selected} ${e.key}`
-        this.setState({'textarea': this.state.textarea + (localStorage.getItem(langPlusKey) || this.state.languages[this.state.selected][e.key])})
-      }
-      else if (e.key === 'Backspace' && e.target.id && e.target.id !== 'textarea'){
-        this.changeKey(e)
-      }
-    })
-  }
+    // document.querySelector('#textarea').focus()
+    // document.addEventListener('input', e => {
+      // debugger
+      // this.setState({textarea: e.data})
+      // this.setState({textarea: e.key}) // 'Unidentified' on mobile
+      // this.setState({textarea: e.code}) // mobile reg (not tipa), desktop other
+      // this.setState({textarea: e.keyCode}) // always 229
+    //   if (e.target.id === 'textarea' && this.state.languages[this.state.selected][e.key] && this.state.languages[this.state.selected][e.key] !== null){
+    //     e.preventDefault()
+    //     const langPlusKey = `${this.state.selected} ${e.key}`
+    //     this.setState({'textarea': this.state.textarea + (localStorage.getItem(langPlusKey) || this.state.languages[this.state.selected][e.key])})
+    //   }
+    //   else if (e.key === 'Backspace' && e.target.id && e.target.id !== 'textarea'){
+    //     this.changeKey(e)
+    //   }
+    // })
+  // }
 
   changeKey = e => {
     // const langPlusKey = `${this.state.selected} ${e.target.id}`
@@ -127,7 +132,13 @@ class App extends React.Component{
   }
 
   changeTextarea = e => {
-    this.setState({textarea: e.target.value})
+    const val = e.target.value.split('')
+    const last = val.pop()
+    if(this.state.languages[this.state.selected][last]){
+      this.setState({textarea: val.join('') + this.state.languages[this.state.selected][last]})
+    }else{
+      this.setState({textarea: e.target.value})
+    }
   }
 
   handleSelect = (e) => {
@@ -183,7 +194,7 @@ class App extends React.Component{
         languageName={this.state.selected}
         handleChange={this.changeKey}
         />
-        <textarea rows="5" id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
+        <textarea autocomplete='no' rows="5" id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
 
       </div>
     );
