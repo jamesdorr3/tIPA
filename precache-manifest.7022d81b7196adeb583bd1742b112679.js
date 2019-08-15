@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f5c24a3e6ee8abd6a4a005d75c401953",
+    "revision": "28b65bcfac7ffb28bdbf18d5b243dda5",
     "url": "/tIPA/index.html"
   },
   {
-    "revision": "455cb3c1160271c72686",
+    "revision": "20e33bc9b4a1b7ceed3a",
     "url": "/tIPA/static/css/main.49623e7b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tIPA/static/js/2.b13a9952.chunk.js"
   },
   {
-    "revision": "455cb3c1160271c72686",
-    "url": "/tIPA/static/js/main.97d69cb2.chunk.js"
+    "revision": "20e33bc9b4a1b7ceed3a",
+    "url": "/tIPA/static/js/main.94e1897d.chunk.js"
   },
   {
     "revision": "6dc20a09a44e4110010d",
