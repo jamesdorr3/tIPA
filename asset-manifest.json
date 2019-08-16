@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tIPA/static/css/main.f7526e4a.chunk.css",
+    "main.css": "/tIPA/static/css/main.ee3d89aa.chunk.css",
     "main.js": "/tIPA/static/js/main.b4e3d647.chunk.js",
     "main.js.map": "/tIPA/static/js/main.b4e3d647.chunk.js.map",
     "runtime~main.js": "/tIPA/static/js/runtime~main.6c9789b2.js",
@@ -8,8 +8,8 @@
     "static/js/2.b13a9952.chunk.js": "/tIPA/static/js/2.b13a9952.chunk.js",
     "static/js/2.b13a9952.chunk.js.map": "/tIPA/static/js/2.b13a9952.chunk.js.map",
     "index.html": "/tIPA/index.html",
-    "precache-manifest.7281039f4bd72ed597f18709f1821f34.js": "/tIPA/precache-manifest.7281039f4bd72ed597f18709f1821f34.js",
+    "precache-manifest.97fef8f7aa45ae5f41ac1049d1a96efb.js": "/tIPA/precache-manifest.97fef8f7aa45ae5f41ac1049d1a96efb.js",
     "service-worker.js": "/tIPA/service-worker.js",
-    "static/css/main.f7526e4a.chunk.css.map": "/tIPA/static/css/main.f7526e4a.chunk.css.map"
+    "static/css/main.ee3d89aa.chunk.css.map": "/tIPA/static/css/main.ee3d89aa.chunk.css.map"
   }
 }
