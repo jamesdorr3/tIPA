@@ -47,15 +47,6 @@ a:hover{color:rgb(0, 47, 255);}
   input[type='text']{font-size:25px;}
   p,li{margin:0.5%}
   li{font-size:15px}
-  #textarea{width:90%;position:relative;margin:1% 4%;padding:1%;font-size:30px;border:1px solid black;}
-  .keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% 0%;background:darkgray;max-width:1200px;position:relative;width:100%;}
-  .key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black;}
-  .key:hover{box-shadow:none;}
-  /* .keyName{font-size:200%;background:black;color:white;position:absolute;top:0px;border-radius:25px;padding:1% 5%} */
-  .keyName{font-size:15px;background:none;color:white;position:relative;display:block;top:0px;width:100%;text-align:center}
-  .numbers-row{position:relative;display:grid;grid-template-columns:0% repeat(10,1fr)0.5fr}
-  .top-row{position:relative;display:grid;grid-template-columns:0.5fr repeat(10,1fr) 0%}
-  .middle-row{position:relative;display:grid;grid-template-columns:0.75fr repeat(9,1fr) 0.9fr}
-  .bottom-row{position:relative;display:grid;grid-template-columns:1.25fr repeat(9,1fr) 0.5fr}
-  input::-webkit-calendar-picker-indicator {opacity:0;width:0%;}
+  .keyboard{margin:1% auto;}
+  input::-webkit-calendar-picker-indicator {opacity:100;background:rgba(231, 231, 231);border:1px solid rgba(128, 128, 128);width:20%;border-radius:5px;padding:10%}
 }
