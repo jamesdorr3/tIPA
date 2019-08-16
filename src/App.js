@@ -119,7 +119,7 @@ class App extends React.Component{
     // }else{
     //   localStorage.setItem(langPlusKey, e.target.value)
     // }
-
+    // debugger
     this.setState({
       languages:{
         ...this.state.languages,
@@ -159,11 +159,11 @@ class App extends React.Component{
 
         <h1>tIPA</h1>
 
-        <p>Quickly Type the International Phonetic Alphabet (IPA)</p>
+        <p>Quickly type the International Phonetic Alphabet (IPA)</p>
         <ol>
           <li>Choose a language ('English, Phonologic' is the default)</li>
           <li>Type in the text box ('Start typing here!')</li>
-          <li>The keys you press will be replaced by the symbols in the virtual keyboards</li>
+          <li>The keys pressed will be replaced by the symbols in the virtual keyboards</li>
         </ol>
 
         <select value={this.state.selected} onChange={this.handleSelect}>
