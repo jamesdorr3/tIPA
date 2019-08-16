@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3beebcf2071838b4625ecc8f8b8f06b5",
+    "revision": "f9d924ee525178f847824ef121c261fb",
     "url": "/tIPA/index.html"
   },
   {
