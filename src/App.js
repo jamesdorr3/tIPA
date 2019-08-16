@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 
 import Keyboard from './Components/Keyboard'
-import Textarea from 'react-textarea-autosize';
 
 class App extends React.Component{
 
@@ -20,9 +19,9 @@ class App extends React.Component{
           
         '1':'','2':'','3':'ɛ','4':'ɔ','5':'ɾ̃','6':'ǝ','7':'','8':'ɲ','9':'ʊ','0':'ɔ',
       
-        'A':'eɪ','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'aɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'ʍ','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'u','V':'ð','W':'ʍ','X':'x','Y':'','Z':'ʒ',
+        'A':'eɪ','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'aɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'ʍ','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'u','V':'ð','W':'ʍ','X':'ç','Y':'','Z':'ʒ',
         
-        'a':'æ','b':'b','c':'t͡ʃ','d':'d','e':'ɛ','f':'f','g':'g','h':'h','i':'ɪ','j':'d͡ʒ','k':'k','l':'l','m':'m','n':'n','o':'ɑ','p':'p','q':'Ɂ','r':'ɹ','s':'s','t':'t','u':'ʌ','v':'v','w':'w','x':'','y':'j','z':'z',
+        'a':'æ','b':'','c':'t͡ʃ','d':'','e':'ɛ','f':'','g':'','h':'','i':'ɪ','j':'d͡ʒ','k':'','l':'','m':'','n':'','o':'ɑ','p':'p','q':'Ɂ','r':'ɹ','s':'','t':'','u':'ʌ','v':'','w':'','x':'','y':'j','z':'',
       
         ',':'ˌ','.':'.','~':'̃',"'":'ˈ',";":'ǝ',":":''
       },
@@ -35,9 +34,9 @@ class App extends React.Component{
           
         '1':'ɪ','2':'ʒ','3':'ɛ','4':'ɔ','5':'ɾ̃','6':'ǝ','7':'ɫ','8':'ɲ','9':'ʊ','0':'ɔ',
       
-        'A':'','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'ɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'u','V':'ð','W':'','X':'x','Y':'','Z':'ʒ',
+        'A':'','B':'','C':'ɔ','D':'ɾ','E':'i','F':'θ','G':'','H':'ʰ','I':'ɪ','J':'ʒ','K':'kʰ','L':'ɫ','M':'','N':'ŋ','O':'oʊ','P':'pʰ','Q':'','R':'ɚ','S':'ʃ','T':'ð','U':'ʊ','V':'ð','W':'','X':'ç','Y':'','Z':'ʒ',
         
-        'a':'a','b':'b','c':'','d':'d','e':'e','f':'f','g':'g','h':'h','i':'i','j':'j','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'ɹ','s':'s','t':'t','u':'u','v':'v','w':'w','x':'','y':'','z':'z',
+        'a':'','b':'','c':'','d':'','e':'','f':'','g':'','h':'','i':'','j':'','k':'','l':'','m':'','n':'','o':'','p':'','q':'','r':'ɹ','s':'','t':'','u':'','v':'','w':'','x':'','y':'','z':'',
       
         ',':'ˌ','.':'.','~':'̃',"'":'ˈ',";":'ǝ',":":''
       },
@@ -50,9 +49,9 @@ class App extends React.Component{
           
         '1':'','2':'','3':'','4':'','5':'','6':'','7':'','8':'','9':'','0':'',
       
-        'A':'','B':'β','C':'t͡ʃ','D':'ð','E':'','F':'','G':'ɣ','H':'ʰ','I':'','J':'j','K':'','L':'ʎ','M':'','N':'ŋ','O':'','P':'pʰ','Q':'','R':'r','S':'ʃ','T':'','U':'u','V':'ð','W':'','X':'','Y':'','Z':'',
+        'A':'','B':'β','C':'t͡ʃ','D':'ð','E':'','F':'','G':'ɣ','H':'ʰ','I':'','J':'j','K':'','L':'ʎ','M':'','N':'ŋ','O':'','P':'pʰ','Q':'','R':'r','S':'s̺̪','T':'','U':'u','V':'ð','W':'','X':'','Y':'','Z':'',
         
-        'a':'a','b':'b','c':'θ','d':'d̪','e':'e','f':'f','g':'g','h':'h','i':'i','j':'h','k':'k','l':'l','m':'m','n':'n','o':'o','p':'p','q':'','r':'ɾ','s':'s','t':'t̪','u':'u','v':'v','w':'w','x':'','y':'ʝ','z':'z',
+        'a':'','b':'','c':'θ','d':'d̪','e':'','f':'','g':'','h':'','i':'','j':'','k':'','l':'','m':'','n':'','o':'','p':'','q':'','r':'ɾ','s':'','t':'t̪','u':'','v':'','w':'','x':'','y':'ʝ','z':'θ',
       
         ',':'ˌ','.':'.',';':'ɲ','~':'̃',"'":'ˈ'
       },
@@ -134,7 +133,8 @@ class App extends React.Component{
   changeTextarea = e => {
     const val = e.target.value.split('')
     const last = val.pop()
-    if(this.state.languages[this.state.selected][last]){
+    // debugger
+    if((e.target.value.length > this.state.textarea.length) && this.state.languages[this.state.selected][last]){
       this.setState({textarea: val.join('') + this.state.languages[this.state.selected][last]})
     }else{
       this.setState({textarea: e.target.value})
@@ -156,6 +156,30 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
+
+        <nav role='navigation'>
+          <div id='menuToggle'>
+            <input type='checkbox'/>
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <ul id='menu'>
+              <a href='https://github.com/jamesdorr3'><li>GitHub</li></a>
+              <a href='https://jamesdorr3.github.io'><li>Portfolio</li></a>
+              <a href='mailto:jamesdorr3@gmail.com'><li>Contact</li></a>
+              <li className='smaller'>Comments, suggestions, or requests? Contact me!</li>
+            </ul>
+          </div>
+        </nav>
+
+        {/* <div className='menu'>
+          <button><img src='../hamburger-menu-icon.png'/></button>
+          <div className='hiddenMenuContent'>
+            <p>test</p>
+            <p>content</p>
+          </div>
+        </div> */}
 
         <h1>tIPA</h1>
 
@@ -194,7 +218,7 @@ class App extends React.Component{
         languageName={this.state.selected}
         handleChange={this.changeKey}
         />
-        <textarea autocomplete='no' rows="5" id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
+        <textarea rows='4' id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
 
       </div>
     );
