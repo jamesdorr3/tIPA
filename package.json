@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "http://gitname.github.io/tIPA",
   "dependencies": {
+    "eslint-utils": "^1.4.2",
     "lodash": "^4.17.14",
     "lodash.template": "^4.5.0",
     "react": "^16.8.6",
