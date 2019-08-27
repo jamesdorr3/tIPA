@@ -3,13 +3,14 @@ import React from 'react'
 export default class Keyboard extends React.Component{
 
   makeKeys = arr => {
-    return arr.map(key => (
-      <span className='key' key={key}>
+    return arr.map(key => {
+      // this[key] = React.createRef();
+      return <span className='key' key={key}>
         <span className='keyName'>{key}</span>
         <input
           acceptCharset="UTF-8"
           type='text'
-          id={key}
+          // ref={this[key]}
           placeholder={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
           value={localStorage.getItem(`${this.props.languageName} ${key}`) || this.props.languageKeys[key]} 
           onChange={this.props.handleChange}
@@ -19,7 +20,7 @@ export default class Keyboard extends React.Component{
           onBlur={(e) => e.target.value = this.props.languageKeys[key]}
         />
       </span>
-    ))
+    })
   }
 
   render(){

@@ -90,6 +90,11 @@ class App extends React.Component{
     
     'textarea':''
   }
+
+  constructor(props) {
+    super(props);
+    this.textarea = React.createRef();
+  }
   
   // componentDidMount(){ // add NO ctrl or option or command
     // this.setState({selected: Object.keys(this.state.languages)[0]})
@@ -133,6 +138,7 @@ class App extends React.Component{
   changeTextarea = e => {
     const val = e.target.value.split('')
     const last = val.pop()
+    // this[last].className='what?'
     // debugger
     if((e.target.value.length > this.state.textarea.length) && this.state.languages[this.state.selected][last]){
       this.setState({textarea: val.join('') + this.state.languages[this.state.selected][last]})
@@ -143,6 +149,7 @@ class App extends React.Component{
 
   handleSelect = (e) => {
     this.setState({selected: e.target.value})
+    this.textarea.current.focus()
   }
 
   removeLocalStorage = () => {
@@ -183,7 +190,8 @@ class App extends React.Component{
 
         <h1>tIPA</h1>
 
-        <p>Quickly type the International Phonetic Alphabet (IPA)</p>
+        <p>Quickly type <a href='https://simple.wikipedia.org/wiki/International_Phonetic_Alphabet#Use_of_the_alphabet'>the International Phonetic Alphabet (IPA)</a></p>
+        <p className='explanation'>The IPA is made to have one symbol for every sound. This means that every letter always makes the same one sound. This is different from English. In English, some letters make multiple sounds. For example, the letter x in English normally is spoken as two sounds ([ks]), but could also be [gz] or [z]. - <a href='https://simple.wikipedia.org/wiki/International_Phonetic_Alphabet#Use_of_the_alphabet'>Wikipedia</a></p>
         <ol>
           <li>Choose a language ('English, Phonologic' is the default)</li>
           <li>Type in the text box ('Start typing here!')</li>
@@ -218,7 +226,7 @@ class App extends React.Component{
         languageName={this.state.selected}
         handleChange={this.changeKey}
         />
-        <textarea rows='4' id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
+        <textarea ref={this.textarea} rows='4' id='textarea' placeholder='Start typing here!' onChange={this.changeTextarea} value={this.state.textarea}/>
 
       </div>
     );

@@ -6,9 +6,11 @@ select{background:rgb(231, 231, 231);font-size:20px;position:relative;width:90%;
 input[type='text']{width:95%;font-size:15px;background:white;color:black;border:1px solid black;text-align:center;margin:1%;padding:2%}
 h1{background:rgb(0, 47, 255);color:white;text-align:center;margin:0%;padding:0%;width:101%;height:38px}
 p,li{margin:2%}
+p a{color:black}
 h1,p,li{font-family: "Arial", Arial, sans-serif;}
 p{text-align:center}
 li{font-size:12px}
+.explanation{font-size:12px;text-align:justify;margin:20px}
 #textarea{width:90%;position:relative;margin:1% 4%;padding:1%;font-size:30px;border:1px solid black;}
 .keyboard{border:1px solid black;border-radius:5px;padding:1% 0%;margin:1% 0%;background:darkgray;max-width:1200px;position:relative;width:100%;}
 .key{position:relative;border:0.5px solid gray;border-radius:5px;background:black;margin:3% 1%;box-shadow:5px 5px 10px black;}
@@ -27,8 +29,8 @@ input::-webkit-calendar-picker-indicator {opacity:0;width:0%;}
 
 /* HAMBURGER */
 nav{;margin:0px;padding:0px;height:0px;}
-a{text-decoration:none;color:#232323;transition: color 0.3s ease;}
-a:hover{color:rgb(0, 47, 255);}
+ul a{text-decoration:none;color:#232323;transition: color 0.3s ease;}
+ul a:hover{color:rgb(0, 47, 255);}
 #menuToggle{display:block;position:relative;top:8px;left:20px;z-index:1;-webkit-user-select:none;user-select:none}
 #menuToggle input{display:block;width:40px;height:32px;position:absolute;top:-7px;left:-5px;cursor:pointer;opacity:0;z-index:2;-webkit-touch-callout:none;}
 #menuToggle span{display:block;width:33px;height:4px;margin-bottom:5px;position:relative;background:#cdcdcd;border-radius:3px;z-index:1;transform-origin:4px 0px;transition:transform 0.5s cubic-bezier(0.7,0.2,0.05,1.0),background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),opacity 0.55s ease;}
